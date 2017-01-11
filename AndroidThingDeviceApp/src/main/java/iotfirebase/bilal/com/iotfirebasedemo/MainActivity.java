@@ -1,12 +1,10 @@
 package iotfirebase.bilal.com.iotfirebasedemo;
 
-import android.renderscript.Sampler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 
 import com.google.android.things.pio.Gpio;
-import com.google.android.things.pio.GpioCallback;
 import com.google.android.things.pio.PeripheralManagerService;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;

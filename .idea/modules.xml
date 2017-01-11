@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AndroidMobileApp/AndroidMobileApp.iml" filepath="$PROJECT_DIR$/AndroidMobileApp/AndroidMobileApp.iml" />
+      <module fileurl="file://$PROJECT_DIR$/AndroidThingDeviceApp/AndroidThingDeviceApp.iml" filepath="$PROJECT_DIR$/AndroidThingDeviceApp/AndroidThingDeviceApp.iml" />
       <module fileurl="file://$PROJECT_DIR$/IOTFirebaseDemo.iml" filepath="$PROJECT_DIR$/IOTFirebaseDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
-      <module fileurl="file://$PROJECT_DIR$/iotandroidapplication/iotandroidapplication.iml" filepath="$PROJECT_DIR$/iotandroidapplication/iotandroidapplication.iml" />
     </modules>
   </component>
 </project>

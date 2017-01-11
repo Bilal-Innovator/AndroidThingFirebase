@@ -1,1 +1,1 @@
-include ':app', ':iotandroidapplication'
+include ':AndroidThingDeviceApp', ':AndroidMobileApp'
