@@ -13,13 +13,11 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
 
-import java.io.IOException;
-
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
-    ToggleButton toggleButton;
 
+    ToggleButton toggleButton;
     FirebaseDatabase database;
     DatabaseReference myRef;
 
@@ -55,6 +53,7 @@ public class MainActivity extends AppCompatActivity {
                 // This method is called once with the initial value and again
                 // whenever data at this location is updated.
                 String value = dataSnapshot.getValue(String.class);
+
                 Log.d(TAG, "Value is: " + value);
 
                 if (value.matches("on")) {
