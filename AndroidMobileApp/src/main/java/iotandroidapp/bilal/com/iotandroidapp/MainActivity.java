@@ -29,7 +29,7 @@ public class MainActivity extends AppCompatActivity {
         String token = FirebaseInstanceId.getInstance().getToken();
         Log.d(TAG, "FCM Token: " + token);
 
-        // Write a message to the database
+        // Write a message to the firebase database
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference("IOT").child("led");
 
