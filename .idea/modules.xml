@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/IOTFirebaseDemo.iml" filepath="$PROJECT_DIR$/IOTFirebaseDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/iotandroidapplication/iotandroidapplication.iml" filepath="$PROJECT_DIR$/iotandroidapplication/iotandroidapplication.iml" />
     </modules>
   </component>
 </project>
