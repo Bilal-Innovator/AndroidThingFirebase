@@ -49,13 +49,13 @@ public class MainActivity extends AppCompatActivity {
 
                 if (value.matches("on")) {
                     try {
-                        mButtonGpio.setValue(true);
+                        mButtonGpio.setValue(false);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                 } else if (value.matches("off")) {
                     try {
-                        mButtonGpio.setValue(false);
+                        mButtonGpio.setValue(true);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }

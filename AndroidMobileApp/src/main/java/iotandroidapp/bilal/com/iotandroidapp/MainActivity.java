@@ -12,11 +12,15 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 import com.google.firebase.iid.FirebaseInstanceId;
+import android.speech.tts.TextToSpeech;
+
+import java.util.Locale;
 
 public class MainActivity extends AppCompatActivity {
 
     public static final String TAG = "MainActivity";
 
+    TextToSpeech t1;
     ToggleButton toggleButton;
     FirebaseDatabase database;
     DatabaseReference myRef;
@@ -35,12 +39,23 @@ public class MainActivity extends AppCompatActivity {
 
         toggleButton = (ToggleButton) findViewById(R.id.toggleButton);
 
+        t1=new TextToSpeech(getApplicationContext(), new TextToSpeech.OnInitListener() {
+            @Override
+            public void onInit(int status) {
+                if(status != TextToSpeech.ERROR) {
+                    t1.setLanguage(Locale.UK);
+                }
+            }
+        });
+
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
+                    t1.speak("on", TextToSpeech.QUEUE_FLUSH, null);
                     myRef.setValue("on");
                 } else if (!isChecked) {
+                    t1.speak("off", TextToSpeech.QUEUE_FLUSH, null);
                     myRef.setValue("off");
                 }
             }
