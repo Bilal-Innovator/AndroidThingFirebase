@@ -33,7 +33,7 @@ public class BoardDefaults {
     /**
      * Return the GPIO pin that the Button is connected on.
      */
-    public static String getGPIOForButton() {
+    public static String getGPIOForLight() {
         switch (getBoardVariant()) {
             case DEVICE_EDISON_ARDUINO:
                 return "IO12";
@@ -41,6 +41,21 @@ public class BoardDefaults {
                 return "GP44";
             case DEVICE_RPI3:
                 return "BCM6";
+            case DEVICE_NXP:
+                return "GPIO4_IO20";
+            default:
+                throw new IllegalStateException("Unknown Build.DEVICE " + Build.DEVICE);
+        }
+    }
+
+    public static String getGPIOForFan() {
+        switch (getBoardVariant()) {
+            case DEVICE_EDISON_ARDUINO:
+                return "IO12";
+            case DEVICE_EDISON:
+                return "GP44";
+            case DEVICE_RPI3:
+                return "BCM5";
             case DEVICE_NXP:
                 return "GPIO4_IO20";
             default:
